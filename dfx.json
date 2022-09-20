@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "openXpress": {
+      "main": "src/openXpress/main.mo",
+      "type": "motoko"
+    },
+    "openXpress_assets": {
+      "dependencies": [
+        "openXpress"
+      ],
+      "frontend": {
+        "entrypoint": "src/openXpress_assets/src/index.html"
+      },
+      "source": [
+        "src/openXpress_assets/assets",
+        "dist/openXpress_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
